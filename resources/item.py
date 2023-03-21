@@ -49,8 +49,8 @@ class ItemList(MethodView):
     def post(self, item_data):
         for item in items.values():
             if (
-                item_data["name"] == item["name"]
-                and item_data["store_id"] == item["store_id"]
+                    item_data["name"] == item["name"]
+                    and item_data["store_id"] == item["store_id"]
             ):
                 abort(400, message=f"Item already exists.")
 
